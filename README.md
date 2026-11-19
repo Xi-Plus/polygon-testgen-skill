@@ -72,10 +72,16 @@ python local_check.py pA
 python stress.py pA --gen "gen -n 8 -type rand" --sol brute.cpp --count 500
 
 # 上傳（第一次會建立題目並把 id 寫回 polygon.json）
-python upload_to_polygon.py pA --dry-run
-python upload_to_polygon.py pA
-python upload_to_polygon.py pA --title-only       # 只更新題名
-python upload_to_polygon.py pA --statement-only   # 只更新題敘
+python upload_to_polygon.py pA --dry-run          # 只列出會送的請求
+python upload_to_polygon.py pA                    # 上傳全部項目並建 package
+python upload_to_polygon.py A C                   # 單一字母會自動找 pA/、pC/
+python upload_to_polygon.py --all                 # 所有含 polygon.json 的 p*/ 資料夾
+python upload_to_polygon.py pA --only title       # 只更新題名
+python upload_to_polygon.py pA --only statement   # 只更新題敘（含題名）
+python upload_to_polygon.py pA pB --only statement,package  # 多個項目用逗號分隔
+python upload_to_polygon.py --all --skip package  # 上傳但不建 package
+# 項目（--only / --skip 皆可用逗號指定多個）：
+#   info、title、statement、validator、solution、test、access、package
 
 # 預覽題敘轉成的 LaTeX（Polygon 題敘不支援 Markdown，上傳時用同一套轉換）
 python md2polygon.py pA            # 寫到 pA/.build/statement.tex
