@@ -1,0 +1,8 @@
+{
+  "name": "polygon-testgen",
+  "version": "0.1.0",
+  "description": "從競賽題本（PDF / Markdown）產生 Codeforces Polygon 格式的題目包：testlib generator、validator、子題配分、正解與錯解，本機驗證後用 API 上傳。",
+  "author": { "name": "xiplus" },
+  "license": "MIT",
+  "keywords": ["polygon", "codeforces", "testlib", "competitive-programming", "test-data", "olympiad"]
+}

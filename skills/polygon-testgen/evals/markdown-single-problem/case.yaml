@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: markdown-single-problem
+context:
+  scaffold_script: place-files.sh
+expected_outcome: |
+  pC/ 內有完整的 Polygon 題目包：polygon.json（三個子題 20/30/50，group 0 為範例，子題 3 依賴 1、2）、
+  statement.md、files/gen.cpp 與 files/val.cpp（以 validator.group() 檢查 N ≤ 100 與只含 a/b）、
+  script.txt、solutions/ 下的正解、暴力解與至少兩支錯誤解、tests/01~02 範例。
+  在本機跑過驗證，所有測資合法，每支錯誤解都至少在一筆測資失敗，main 在範例上輸出 5 與 1。

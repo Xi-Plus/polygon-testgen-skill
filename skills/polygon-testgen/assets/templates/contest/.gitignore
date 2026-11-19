@@ -1,0 +1,19 @@
+# 機密：Polygon API key
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# 本機編譯產物與暫存
+*.exe
+*.o
+*/.build/
+
+# 本機產生的測資：Polygon 會用 gen + script.txt 重新產生，只保留範例。
+# 某題範例超過 2 筆時，照樣加上 !pX/tests/03 與 !pX/tests/03.a
+p?/tests/*
+!p?/tests/01
+!p?/tests/01.a
+!p?/tests/02
+!p?/tests/02.a

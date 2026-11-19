@@ -1,0 +1,11 @@
+{
+  "name": "polygon-testgen",
+  "owner": { "name": "xiplus" },
+  "plugins": [
+    {
+      "name": "polygon-testgen",
+      "source": "./",
+      "description": "從競賽題本產生 Codeforces Polygon 格式測資與題目包"
+    }
+  ]
+}

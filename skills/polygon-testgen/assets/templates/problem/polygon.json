@@ -1,0 +1,22 @@
+{
+  "name": "example-2026-pa-max-subarray",
+  "title": "最大區間和 (Max Subarray)",
+  "timeLimit": 1000,
+  "memoryLimit": 256,
+  "validator": "val.cpp",
+  "checker": "std::wcmp.cpp",
+  "samples": "1-2",
+  "access": {"codeforces": "READ"},
+  "groups": [
+    {"group": "0", "tests": "1-2",   "points": 0,  "policy": "EACH_TEST"},
+    {"group": "1", "tests": "3-9",   "points": 20},
+    {"group": "2", "tests": "10-15", "points": 30},
+    {"group": "3", "tests": "16-25", "points": 50, "dependencies": "1,2"}
+  ],
+  "solutions": {
+    "main.cpp": "MA",
+    "brute.cpp": "RJ",
+    "wa_int_overflow.cpp": "WA",
+    "wa_allow_empty.cpp": "WA"
+  }
+}

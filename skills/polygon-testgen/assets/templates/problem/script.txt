@@ -1,0 +1,27 @@
+<#-- pA 最大區間和 test script. Tests 1-2 are manual samples (group 0). -->
+<#-- Group 1: N <= 100 -->
+gen -n 1 -type rand 101 > 3
+gen -n 1 -type allneg -lo -1000000000 102 > 4
+gen -n 2 -type rand -lo -5 -hi 5 103 > 5
+gen -n 100 -type rand -ext 1 104 > 6
+gen -n 100 -type allneg 105 > 7
+gen -n 100 -type wave 106 > 8
+gen -n 99 -type rand -lo -3 -hi 3 107 > 9
+<#-- Group 2: a_i >= 0 -->
+gen -n 1 -type rand -lo 0 -hi 0 201 > 10
+gen -n 200000 -type rand -lo 0 -ext 1 202 > 11
+gen -n 200000 -type big -lo 0 203 > 12
+gen -n 200000 -type rand -lo 0 -hi 0 204 > 13
+gen -n 1000 -type rand -lo 0 -hi 10 205 > 14
+gen -n 199999 -type rand -lo 0 -hi 1000000000 206 > 15
+<#-- Group 3: no extra constraints -->
+gen -n 200000 -type rand -ext 1 301 > 16
+gen -n 200000 -type allneg 302 > 17
+gen -n 200000 -type big 303 > 18
+gen -n 200000 -type wave 304 > 19
+gen -n 200000 -type rand -lo -10 -hi 10 305 > 20
+gen -n 200000 -type rand -lo -1000000000 -hi 1 306 > 21
+gen -n 1000 -type wave 307 > 22
+gen -n 200000 -type big 308 > 23
+gen -n 2 -type allneg 309 > 24
+gen -n 199998 -type rand -lo -1 -hi 1 310 > 25
